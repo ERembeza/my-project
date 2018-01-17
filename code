@@ -1,0 +1,109 @@
+import time #manipulating dates and times
+import requests #HTTP library
+from os.path import isfile #checking if file of a given directory exists
+
+
+def download_pdf(filename):
+    '''
+    the function is used to download media files using links listed in 
+    one of the columns of the input file
+    argument of the function is the input file
+    many microorganisms listed share the same media - download only one file for each medium
+    '''
+
+    file = open(filename, 'r')
+
+    for line in file:
+        fields = line.split('\t')
+    
+        Medium = fields[8].rstrip() # media url links are in the 9th column of the file
+        Name = 'Medium' + Medium.strip('http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_') 
+    
+        url = Medium
+    
+    
+        filename = '/Users/...' + Name + '.pdf' 
+        #in place of "..." put the pathway of the folder to place the pdfs in
+    
+        
+        if Medium != 'None':
+            if isfile(filename) is False:
+                result = requests.get(url)
+                with open(filename, 'wb') as f:
+                    f.write(result.content)
+                    time.sleep(1)
+        
+
+    file.close()
+
+
+download_pdf('/Users/.../Input_file.txt') 
+
+
+#****** 2nd step *****
+
+import os 
+import PyPDF2
+import re
+
+
+def pH_count(pH_data):
+    '''
+    function calculates how many media files retured no pH values,
+    one value or more than one value
+    it takes extracted pH values as an argument
+    it will be used inside the function below
+    '''
+    count_empty = 0
+    count_one = 0
+    count_many = 0
+    for entry in pH_data:
+       length = len(set(entry)) #set takes only unique values 
+       if length == 0:
+           count_empty += 1
+       elif length == 1:
+           count_one += 1
+       else:
+           count_many +=1
+    print('Number of media with no pH values: ' + str(count_empty))
+    print('Number of media with one pH value: ' + str(count_one))
+    print('Number of media with two or more pH values: ' + str(count_many))
+
+def get_pH(path):
+    ''' 
+    function iterates through pdf files with composition of growth media,
+    extracts their text and searches for pH values
+    argument taken is a path of a folder with media pdf files downloades earlier
+    media numbers and pH values are writen to a txt file 
+    '''  
+    listings = os.listdir(path)
+    pH_list = []
+    all_ph = []
+    
+    # go through each pdf file and get the text
+    for pdf in listings:
+        pdfFilename = path + pdf
+        pdfFileObj = open(pdfFilename, 'rb')
+        pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
+        num_pages = pdfReader.getNumPages()
+        
+        text = ''
+        for n in range(0, num_pages):
+            page = pdfReader.getPage(n) #get all pages - get num pages with pypdf2,
+            text = text + '\n' + page.extractText()
+        
+        #looking for pH values by extracting numbers that follow the expression "pH"
+        combined_regex = 'pH.+?([0-9]{1,2}(?:[.][0-9]{1,2})?(?:[ -to]+[0-9]{1,2}[.][0-9]{1,2})?)'
+        found = re.findall(combined_regex, text, re.DOTALL)
+        Medium = pdf.strip('Medium.pdf')
+        pH_list.append(Medium + '\t ' + str(found)) #will be printed to a txt file
+        all_ph.append(found) # will be used as argument for pH_count
+        
+    pH_count(all_ph)    
+    pH_list = '\n'.join(pH_list)
+    f = open('pH_list.txt', 'w')
+    f.write(pH_list)
+        
+    f.close()
+        
+get_pH('/Users/...') 
