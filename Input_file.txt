@@ -1,0 +1,16 @@
+DSMZ	8373	Aneurinibacillus migulanus	30.0	1	bacteria	47500	None	http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium1.pdf
+DSMZ	8373	Bacillus migulanus	30.0	1	bacteria	47500	None	http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium1.pdf
+DSMZ	15630	Desulfobacterium corrodens	None	1	bacteria	241365	enrichment culture with metallic iron and sulfate 	http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium1010.pdf
+DSMZ	17682	Desulfoluna spongiiphila	None	1	bacteria	419481	<i>Aplysina aerophoba</i> sponges 	http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium1040.pdf
+DSMZ	5898	Methylophilus glucoseoxidans	28.0	1	bacteria	752553	rhizosphere of rice (<i>Oryza sativa</i> L.) 	http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium620.pdf
+DSMZ	6836	Clostridium viride	None	1	bacteria	47246	anaerobic sewage sludge 	http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium526.pdf
+DSMZ	4335	Bacillus aminovorans	28.0	1	bacteria	29332	soil of lawn 	http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium531.pdf
+DSMZ	51852	Corallococcus exiguus	28.0	1	bacteria	83462	soil 	http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium9.pdf
+DSMZ	51852	Myxococcus exiguus	28.0	1	bacteria	83462	soil 	http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium9.pdf
+DSMZ	3222	Oxobacter pfennigii	None	1	bacteria	36849	rumen of cattle 	http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium336.pdf
+DSMZ	16629	Thiobacter subterraneus	None	1	bacteria	279810	subsurface hot aquifer water in the Hishikari gold mine 	http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium1011.pdf
+DSMZ	9129	Hydrogenibacillus schlegelii	55.0	1	bacteria	1484	settling pond of sugar factory	None
+DSMZ	15673	Methylocella tundrae	0.0	1	bacteria	227605	sphagnum peat of tundra wetland 	http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium1007.pdf
+DSMZ	16953	Acidicaldus organivorus	50.0	1	bacteria	209650	enrichment culture inoculated with a water sample from a Frying Pan thermal spring 	http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium1038.pdf
+DSMZ	16918	Desulfovibrio sp.	None	1	bacteria	885	reduced marine surface sediment of a methane seep 	http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium195.pdf
+DSMZ	3305	Dispira cornuta	None	1	fungi	78923	mouse dung 	http://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium190.pdf
