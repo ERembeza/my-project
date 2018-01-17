@@ -9,5 +9,7 @@ The second step is to look for pH values in those files and write them down in a
 
 
 Some of the packages used:
+
 requests: HTTP library, getting acces to url links
+
 PyPDF2: operation on pdf files, such as extracting text
