@@ -1,7 +1,7 @@
 # my-project
 **The aim of the code is to list pH values of media of interests.**
 
-The input file contains examples of data I worked on; it carries various information about microorganisms, among other things: url link to the website with culture media pdf files.
+The input file (Input_file.txt) contains examples of data I worked on; it carries various information about microorganisms, among other things: url link to the website with culture media pdf files.
 
 The first step is to download all media files.
 
