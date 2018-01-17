@@ -1,3 +1,5 @@
+#**** 1st step *****
+
 import time #manipulating dates and times
 import requests #HTTP library
 from os.path import isfile #checking if file of a given directory exists
