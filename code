@@ -12,7 +12,9 @@ def download_pdf(filename):
     argument of the function is the input file
     many microorganisms listed share the same media - download only one file for each medium
     '''
-
+    
+    path = '...' #in place of "..." put the path of the folder to place the pdfs in
+    
     file = open(filename, 'r')
 
     for line in file:
@@ -24,8 +26,7 @@ def download_pdf(filename):
         url = Medium
     
     
-        filename = '/Users/...' + Name + '.pdf' 
-        #in place of "..." put the pathway of the folder to place the pdfs in
+        filename = path + Name + '.pdf' 
     
         
         if Medium != 'None':
@@ -39,7 +40,7 @@ def download_pdf(filename):
     file.close()
 
 
-download_pdf('/Users/.../Input_file.txt') 
+download_pdf('/.../Input_file.txt') #path of the "Input_file.txt" in place of "..."
 
 
 #****** 2nd step *****
@@ -75,7 +76,7 @@ def get_pH(path):
     ''' 
     function iterates through pdf files with composition of growth media,
     extracts their text and searches for pH values
-    argument taken is a path of a folder with media pdf files downloades earlier
+    argument taken is a path of a folder with media pdf files downloaded earlier
     media numbers and pH values are writen to a txt file 
     '''  
     listings = os.listdir(path)
@@ -108,4 +109,4 @@ def get_pH(path):
         
     f.close()
         
-get_pH('/Users/...') 
+get_pH('...') #path of a folder with media pdf files in place of "..."
